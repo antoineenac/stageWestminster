@@ -89,7 +89,7 @@ def costs(stay, feedic): #compute the price of a stay using the dictionnary of a
 		parkingcosts = countdownParkingHour(landingDate, departureDate).total_seconds()/60 *  float(feedic[ac_type]['Parking 1']) #not sure where to find the information of the costs or parking per hour..
 		landingcosts = feedic[ac_type]['Chapter']
 		nightcost = 0 if (landingHour<23 and landingHour >= 6) else feedic[ac_type]['Night surcharge']  
-		return(passengercosts + infrastructurecosts + parkingcosts + landingcosts + nightcost + 0) 
+		return(passengercosts + infrastructurecosts + parkingcosts + landingcosts + nightcost) 
 
 def main():
 
